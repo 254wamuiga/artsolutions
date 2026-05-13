@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Navigation } from "@/components/Navigation";
-import { AnimatedAnt } from "@/components/AnimatedAnt";
 import { Footer } from "@/components/Footer";
 
 const roboto = localFont({
@@ -41,6 +40,7 @@ const sora = localFont({
 export const metadata: Metadata = {
   title: "Kamau Wamuiga — Product Designer & Developer",
   description: "Product designer and developer building purposeful digital tools from Nairobi, Kenya.",
+  icons: { icon: "/favIcon.png" },
 };
 
 export default function RootLayout({
@@ -57,7 +57,6 @@ export default function RootLayout({
         <Navigation />
         {children}
         <Footer />
-        <AnimatedAnt />
       </body>
     </html>
   );
