@@ -43,7 +43,7 @@ export function Navigation() {
             <Link href="/">
                 <div className="relative h-10 w-[180px] md:w-[220px]">
                     <Image
-                        src="/MainLogo.webp"
+                        src="/mainlogo.webp"
                         alt="hASolutions — Stories by Kamau Wamuiga"
                         fill
                         className={cn("object-contain object-left transition-opacity duration-400", isDarkSection ? 'opacity-0' : 'opacity-100')}
