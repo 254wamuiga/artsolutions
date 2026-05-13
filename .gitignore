@@ -43,5 +43,9 @@ next-env.d.ts
 # original unoptimized media (keep optimized WebP/WebM only)
 /_originals/
 
-# downloaded font source zips
+# downloaded font source zips/folders
 /public/Geist_Mono,Instrument_Sans,Manrope,Roboto,Sora/
+/public/*.zip
+
+# build logs
+build_log.txt
