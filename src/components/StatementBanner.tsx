@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { PlusIcon } from 'lucide-react';
 
 const STATEMENTS = [
-  { line1: 'Designing for', line2: 'Clarity.' },
+  { line1: 'Still figuring things out.', line2: 'Shipping anyway.' },
   { line1: 'Developing for', line2: 'Impact.' },
   { line1: 'Delivering', line2: 'Outcomes.' },
 ];

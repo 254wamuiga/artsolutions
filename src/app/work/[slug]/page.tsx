@@ -20,12 +20,15 @@ const PROJECT_DATA: Record<string, {
     problem: {
         description: string;
         points: string[];
+        prose?: string[];
     };
     solution: {
         description: string;
         points: string[];
+        prose?: string[];
     };
     impact: string[];
+    impactProse?: string[];
     process: {
         title: string;
         description: string;
@@ -34,8 +37,8 @@ const PROJECT_DATA: Record<string, {
     website?: string;
 }> = {
     'visualizer-ef': {
-        title: 'Slab Visualizer + Automated Lead Workflow',
-        subtitle: 'An interactive product visualization tool paired with automated lead capture — designed to transform how clients explore premium stone surfaces.',
+        title: 'Slab Visualizer — Turning a Form Into a Decision',
+        subtitle: 'Clients weren\'t struggling to fill the form. They were struggling to decide. This is what happened when we designed for that instead.',
         role: 'Product Designer · Front-End Developer · Automation Builder',
         tools: ['JavaScript', 'HTML/CSS', 'Figma', 'n8n', 'Git'],
         gallery: [
@@ -45,46 +48,47 @@ const PROJECT_DATA: Record<string, {
         ],
         client: {
             name: 'Elegant Fittings Ltd',
-            description: 'Elegant Fittings Ltd is a leader in premium stone solutions for kitchens, bathrooms, and architectural interiors across Africa. With a focus on luxury, durability, and design excellence, the company partners with top global brands to offer surfaces that are as high-performing as they are beautiful. Their vision is to transform living spaces through curated material selections that serve both function and aesthetics bringing international standards of quality to local markets.'
+            description: 'Elegant Fittings Ltd is a leader in premium stone surfaces for kitchens, bathrooms, and architectural interiors across Africa. They work with brands like DEKTON, Caesarstone, Sensa, Scalea, and Atlas Porcelain — and their clients are people making expensive, permanent decisions about their homes. That context matters. When the stakes are high and the decision is permanent, the experience around the decision needs to be as considered as the product itself.'
         },
         problem: {
-            description: 'The business needed a better way to handle sample requests for premium stone surfaces. The existing process relied on a static form, which made it hard for clients to visualize materials and resulted in:',
-            points: [
-                'Low-quality leads with poor conversion rates',
-                'High friction for both clients and the sales team',
-                'Manual follow-ups, delayed responses, and lack of tracking'
+            description: '',
+            points: [],
+            prose: [
+                'Before this tool existed, a client who wanted to request a stone sample had a simple process: find the surface they liked, write down the name, open a contact form, type it in, and submit.',
+                'It worked. But watching how people actually moved through it — the hesitation, the back and forth, the uncertainty — something became clear. The problem wasn\'t the form.',
+                'A small swatch and a product name couldn\'t answer the questions that actually mattered: What will this look like in my space? Does it work with my cabinets? Am I going to regret this?',
+                'They weren\'t struggling to submit a form. They were struggling to decide.',
             ]
         },
         solution: {
-            description: 'I designed and developed a product-first experience — a visualizer that lets users preview materials in real-world kitchen and bathroom contexts before requesting a sample. On the backend, I integrated an n8n automation workflow that:',
-            points: [
-                'Captured all request data in a structured database',
-                'Created a unique ticket for each lead',
-                'Automatically emailed clients their tracking ID',
-                'Sent internal updates to the sales team',
-                'Triggered follow-up reminders after X days'
+            description: '',
+            points: [],
+            prose: [
+                'The question shifted from "how do we improve the form?" to "what does someone actually need to feel confident enough to move forward?" That led somewhere different.',
+                'Instead of a better form, we built a space where the decision could actually happen. A lightweight, mobile-first visualizer — no downloads, instant access — where a client could browse every surface in a real kitchen or bathroom setting, change the slab, change the cabinet colour, save combinations, and build a moodboard to share with their architect or interior designer.',
+                'The sample request was still there. It just moved to the end — after the decision, not before it.',
+                'On the backend, an n8n automation workflow handled everything that used to happen manually: a unique ticket for each request, an automatic email to the client with their tracking ID, an internal alert to the sales team, and a follow-up reminder after a set number of days.',
             ]
         },
-        impact: [
-            '50% reduction in manual back-and-forth with clients',
-            'Improved lead conversion rate by pre-qualifying prospects through product interaction',
-            'Saved multiple hours per week for the sales team through automation',
-            'Enabled consistent client communication and tracking through auto-generated emails and status updates',
-            'Created a central database of all sample requests for easier reporting and follow-up'
+        impact: [],
+        impactProse: [
+            'What surprised me most wasn\'t the metrics — it was what opened up.',
+            '50% reduction in manual back-and-forth. Sales conversations changed because clients arrived already knowing what they wanted. Interior designers started using the moodboard tool with their own clients. Marketing started pulling visual content from user sessions as a byproduct.',
+            'Nobody asked for any of that. It emerged because the experience was designed around the decision, not the data collection.',
         ],
         process: [
-            { title: 'Research & UX', description: 'Mapped the old sample request process and identified drop-off points.' },
-            { title: 'Design', description: 'Created a modern, responsive UI in Figma — optimized for mobile and quick interactions.' },
-            { title: 'Development', description: 'Built the interactive visualizer using HTML/CSS/JS; integrated front-end with backend triggers.' },
-            { title: 'Automation', description: 'Configured n8n flows for lead handling, ticket creation, internal comms, and CRM updates.' },
-            { title: 'Testing', description: 'Conducted internal user testing with the sales team to fine-tune flows and notifications.' }
+            { title: 'Research & UX', description: 'I started by mapping the old process end to end, looking for where people slowed down, hesitated, or dropped off. The drop-off wasn\'t at the form. It was earlier — at the moment they had to visualise something they couldn\'t yet see.' },
+            { title: 'Design', description: 'Built in Figma, optimised for mobile first. The interface had to be fast, frictionless, and visually clear — because if it added any friction, it would just become another barrier between the client and their decision.' },
+            { title: 'Development', description: 'Built the visualizer using HTML, CSS, and JavaScript. The front end connected to backend triggers that fired the automation layer without the user ever knowing it was there.' },
+            { title: 'Automation', description: 'Configured n8n to handle lead capture, ticket creation, client emails, sales team notifications, and follow-up scheduling. The goal was to make the system do the coordination work so the team could focus on the conversation.' },
+            { title: 'Testing', description: 'Internal testing with the sales team. They knew the old process better than anyone, so they were the right people to pressure-test whether the new one actually worked.' }
         ],
-        lessons: 'This project taught me that even something as simple as a form — while technically functional — can evolve into a powerful digital experience when paired with thoughtful UX and automation. By turning a static request form into an interactive product preview tool, we not only improved the user journey but unlocked real business value: faster decisions, better-qualified leads, and new use cases we hadn\'t predicted (like moodboards for interior designers and content creation for marketing).',
+        lessons: 'I went into this project thinking about UX. I came out of it thinking about decision-making. The form wasn\'t broken. It was just asking people to commit before they were ready. Once I understood that, the design direction was obvious — but I wouldn\'t have seen it if I\'d started by trying to improve the form. That\'s the thing I keep coming back to: the interesting design work is rarely in the thing in front of you. It\'s in the thing underneath it.',
         website: 'https://visualize-f1c35.web.app/'
     },
     'bensonic': {
-        title: 'Bensonic Tech — E-Commerce Platform',
-        subtitle: 'A full e-commerce platform for Bensonic Tech — your trusted one-stop shop for CCTV systems, internet solutions, access control, network equipment, and laptops in Kenya.',
+        title: 'Bensonic Tech — Making Everything Findable',
+        subtitle: 'A tech retailer with a broad catalogue, expert services, and no online home. Built the platform that made all of it discoverable.',
         role: 'Web Designer · Front-End Developer',
         tools: ['Figma', 'HTML/CSS', 'JavaScript', 'E-Commerce'],
         gallery: [
@@ -94,44 +98,41 @@ const PROJECT_DATA: Record<string, {
         ],
         client: {
             name: 'Bensonic Tech',
-            description: 'Bensonic Tech is a trusted one-stop shop for CCTV systems, internet solutions, access control, network equipment, and laptops in Kenya. They offer quality products, expert service, and unbeatable value across a wide range of technology solutions.'
+            description: 'Bensonic Tech sells a wide range of products and services across Kenya — laptops, CCTV systems, networking equipment, POS systems, installation, and repair. Their clients are businesses and individuals who need to be able to find what they\'re looking for, trust what they see, and make contact without friction.'
         },
         problem: {
-            description: 'Bensonic Tech needed a professional e-commerce presence to match the breadth of their product and service offerings:',
-            points: [
-                'No centralized online shop to showcase their full product catalog',
-                'Customers had difficulty discovering services like CCTV installation, POS systems, and internet setup',
-                'Lack of online credibility compared to larger tech retailers'
+            description: '',
+            points: [],
+            prose: [
+                'Bensonic Tech sells a wide range of products and services — laptops, CCTV systems, networking equipment, POS systems, installation, repair. The problem was that none of it was easy to find online.',
+                'Without a centralised platform, potential customers either didn\'t know the full scope of what Bensonic offered, or couldn\'t access it without picking up a phone. In a market where trust is built before the first conversation, that was costing them.',
             ]
         },
         solution: {
-            description: 'I designed and developed a full e-commerce platform that positions Bensonic as a premium tech destination:',
-            points: [
-                'Built a modern online store with categorized product listings for laptops, gaming, POS, CCTV, and accessories',
-                'Created dedicated service pages for CCTV installation, internet setup, and computer repair',
-                'Implemented customer testimonials and trust signals throughout',
-                'Ensured mobile-responsive design for on-the-go shopping'
+            description: '',
+            points: [],
+            prose: [
+                'Built a full e-commerce platform organised around how customers actually think — not around how the business was structured internally.',
+                'Product categories for laptops, gaming, POS, CCTV, and accessories. Dedicated service pages for installation and repair. Trust signals built in from the start — testimonials, service transparency, and clear contact paths. Mobile-responsive throughout, because most of their customers were coming from a phone.',
             ]
         },
-        impact: [
-            'Established a professional online presence for the business',
-            'Made the full product catalog discoverable and shoppable online',
-            'Built customer trust through testimonials and service transparency',
-            'Improved discoverability of services like installation and repair'
+        impact: [],
+        impactProse: [
+            'Bensonic now has a professional online presence that reflects the breadth of what they actually do. The full product catalogue is discoverable and shoppable. Services that were previously invisible to online visitors are now clearly communicated — which means the sales conversation starts further along.',
         ],
         process: [
-            { title: 'Discovery', description: 'Mapped out the full range of products and services offered by Bensonic Tech.' },
-            { title: 'Information Architecture', description: 'Organized product categories and service pages for intuitive navigation.' },
-            { title: 'UI Design', description: 'Designed a clean, tech-forward e-commerce interface in Figma.' },
-            { title: 'Development', description: 'Built the e-commerce platform with product catalog and service pages.' },
-            { title: 'Launch', description: 'Deployed and optimized based on user feedback and analytics.' }
+            { title: 'Discovery', description: 'Mapped out the full range of products and services. The goal was to understand the business as a customer would encounter it — not as the team described it internally.' },
+            { title: 'Information Architecture', description: 'Getting the navigation right before touching the visual design. When you sell a wide range of products and services, the IA is the product.' },
+            { title: 'UI Design', description: 'Designed a clean, professional interface in Figma. Tech-forward without being cold — because the business also does personal service work like repair and installation.' },
+            { title: 'Development', description: 'Built the e-commerce platform with product catalogue, service pages, and mobile-responsive layouts.' },
+            { title: 'Launch', description: 'Deployed and refined based on real user behaviour.' }
         ],
-        lessons: 'Building an e-commerce platform for a diverse tech company taught me the importance of clear information architecture. When you sell everything from laptops to CCTV installation, the navigation is your product.',
+        lessons: 'When you sell a wide range of products and services, the navigation is the product. A confused user doesn\'t ask for help — they leave. Getting the information architecture right before touching the visual design was what made everything else work on this project.',
         website: 'https://bensonic.co.ke/'
     },
     'linaya': {
-        title: 'Linaya — Digital Brand Experience',
-        subtitle: 'A refined digital experience merging elegant aesthetics with intuitive user flows to showcase brand story and product offerings.',
+        title: 'Linaya — A Digital Presence Worth the Brand',
+        subtitle: 'The products were considered and premium. The website wasn\'t. Rebuilt the digital experience to match what the brand had actually earned.',
         role: 'UI/UX Designer · Front-End Developer',
         tools: ['Figma', 'React', 'CSS3', 'JavaScript'],
         gallery: [
@@ -140,39 +141,36 @@ const PROJECT_DATA: Record<string, {
         ],
         client: {
             name: 'Linaya',
-            description: 'Linaya is a lifestyle brand that values elegance and simplicity. They needed a digital presence that mirrored their refined aesthetic and made product discovery effortless.'
+            description: 'Linaya is a lifestyle brand with real design sensibility — the kind that shows in the products themselves. They needed a digital presence that matched that sensibility, not one that undermined it.'
         },
         problem: {
-            description: 'The existing digital presence did not reflect the brand\'s premium positioning:',
-            points: [
-                'Outdated design that didn\'t match brand values',
-                'Poor mobile experience leading to lost conversions',
-                'Complex navigation that frustrated users'
+            description: '',
+            points: [],
+            prose: [
+                'Linaya is a lifestyle brand with real design sensibility. Their digital presence didn\'t reflect it.',
+                'The site looked dated against what they were selling. The mobile experience lost people before they found what they came for. And the navigation made product discovery feel like work — which, for a brand built on ease and elegance, was the wrong feeling entirely.',
             ]
         },
         solution: {
-            description: 'I redesigned the entire digital experience with a focus on elegance and usability:',
-            points: [
-                'Created a clean, minimal design language reflecting brand values',
-                'Built a mobile-first responsive layout',
-                'Streamlined user flows for product discovery',
-                'Added subtle animations for a premium feel'
+            description: '',
+            points: [],
+            prose: [
+                'Redesigned the full digital experience with one question guiding every decision: does this feel like the brand?',
+                'Clean layout, considered spacing, a mobile-first build that didn\'t treat small screens as an afterthought. Streamlined the navigation so product discovery felt effortless rather than effortful. Added subtle motion to give the experience a sense of quality without making it feel heavy.',
             ]
         },
-        impact: [
-            'Modernized the digital brand perception',
-            'Improved mobile engagement significantly',
-            'Reduced bounce rate through better navigation',
-            'Enhanced product discovery with intuitive layouts'
+        impact: [],
+        impactProse: [
+            'The site now reflects the brand. Mobile engagement improved. Bounce rate dropped as navigation became more intuitive. More importantly — the first impression now matches the product.',
         ],
         process: [
-            { title: 'Research', description: 'Studied the target audience and competitor landscape.' },
-            { title: 'Wireframing', description: 'Created low-fidelity wireframes focusing on user flows.' },
-            { title: 'Visual Design', description: 'Applied the brand\'s elegant aesthetic to high-fidelity mockups.' },
-            { title: 'Prototyping', description: 'Built interactive prototypes for stakeholder review.' },
-            { title: 'Development', description: 'Implemented the design with responsive, clean code.' }
+            { title: 'Brand Audit', description: 'Studied what Linaya stood for and where the existing site was letting that down. The gap between the brand\'s values and its digital presence was the design brief.' },
+            { title: 'Wireframing', description: 'Mapped the user flows before touching visual design. Product discovery was the priority.' },
+            { title: 'Visual Design', description: 'Brought the brand\'s aesthetic into the interface — clean, warm, considered. Every spacing decision was a brand decision.' },
+            { title: 'Development', description: 'Built mobile-first, with subtle motion that reinforces quality rather than decorating it.' },
+            { title: 'Refinement', description: 'Iterated on navigation and product layouts based on how real users moved through the site.' }
         ],
-        lessons: 'This project reinforced that premium brands need premium digital experiences. Every pixel matters when your audience expects elegance.',
+        lessons: 'Premium brands don\'t get a second chance at a first impression. The gap between how a brand presents itself visually and how its digital experience feels is something users notice immediately — even if they can\'t name what\'s wrong. Closing that gap is most of the job.',
         website: 'https://linaya.co.ke/'
     },
     'jgateritherapy': {
@@ -359,8 +357,8 @@ const PROJECT_DATA: Record<string, {
         website: 'https://www.behance.net/gallery/139943575/Made-In-THE-'
     },
     'yum-honey': {
-        title: 'Yum Honey — Artisan Brand Concept',
-        subtitle: 'A sweet, premium brand concept for an artisan honey company — exploring organic packaging design, warm color palettes, and nature-inspired visual storytelling.',
+        title: 'Yum Honey — A Brand That Earns the Shelf',
+        subtitle: 'Artisan food brands live and die by the shelf moment. Built a brand identity that makes people stop, pick it up, and feel something before they read a word.',
         role: 'Brand Designer · Visual Storyteller',
         tools: ['Figma', 'Adobe Illustrator', 'Photoshop'],
         gallery: [
@@ -369,39 +367,35 @@ const PROJECT_DATA: Record<string, {
         ],
         client: {
             name: 'Concept Brief',
-            description: 'A self-initiated brand concept exploring premium packaging and identity design for an artisan honey producer.'
+            description: 'A self-initiated brand concept exploring what it takes to build a premium artisan honey brand from the ground up — from positioning through to packaging and brand collateral.'
         },
         problem: {
-            description: 'Artisan food brands often struggle to stand out in crowded markets:',
-            points: [
-                'Generic packaging that doesn\'t convey premium quality',
-                'Lack of visual storytelling around the product\'s origin',
-                'Missed opportunity to connect with health-conscious consumers'
+            description: '',
+            points: [],
+            prose: [
+                'Artisan honey is a crowded market. Good product alone doesn\'t win — because on a shelf full of glass jars and handwritten labels, everything starts to look the same.',
+                'Yum Honey had a genuinely good product and no visual story to match it. The opportunity was to build a brand that felt warm, premium, and honest — without feeling generic.',
             ]
         },
         solution: {
-            description: 'I designed a complete brand identity that tells the honey\'s story:',
-            points: [
-                'Created a warm, organic visual identity inspired by nature',
-                'Designed premium packaging that stands out on shelves',
-                'Developed a cohesive color palette evoking warmth and quality',
-                'Explored brand touchpoints from packaging to digital presence'
+            description: '',
+            points: [],
+            prose: [
+                'Built the brand identity from scratch — logo, colour palette, typography, and packaging — around a single idea: honey as something made slowly, with care, in a specific place.',
+                'The visual direction drew from nature without leaning on clichés. Warm tones, organic shapes, and a typographic system that felt hand-considered rather than mass-produced. The packaging was designed to earn attention on the shelf and hold it long enough to tell the story.',
             ]
         },
-        impact: [
-            'Created a compelling brand identity from scratch',
-            'Demonstrated expertise in packaging and print design',
-            'Explored the intersection of nature-inspired and premium aesthetics',
-            'Portfolio piece showcasing end-to-end brand design'
+        impact: [],
+        impactProse: [
+            'A self-initiated concept that became a useful proof of what happens when brand strategy and visual craft work from the same brief. The identity demonstrates end-to-end brand design — from positioning through to packaging and brand collateral.',
         ],
         process: [
-            { title: 'Mood Research', description: 'Curated visual references from nature, food, and premium brands.' },
-            { title: 'Brand Identity', description: 'Designed logo, colors, typography, and brand voice.' },
-            { title: 'Packaging Design', description: 'Created label and packaging mockups.' },
-            { title: 'Brand Collateral', description: 'Extended the identity to marketing materials.' },
-            { title: 'Mockups', description: 'Produced realistic product mockups for presentation.' }
+            { title: 'Mood Research', description: 'Pulled references from premium food, nature photography, and independent brands that do warmth without sentimentality.' },
+            { title: 'Brand Identity', description: 'Designed the logo, colour system, and typography as a unified system rather than separate decisions.' },
+            { title: 'Packaging', description: 'Designed labels and packaging mockups optimised for the shelf moment — the three seconds where the product either earns attention or doesn\'t.' },
+            { title: 'Brand Collateral', description: 'Extended the identity to give a sense of how the brand would live across different touchpoints.' },
         ],
-        lessons: 'Packaging design is storytelling in physical form. The best food brands make you feel the product before you taste it.',
+        lessons: 'Packaging design is the most honest form of storytelling I\'ve worked in. You can\'t write your way out of a weak visual. The brand either earns the moment or it doesn\'t, and you find out the second someone walks past it on a shelf.',
         website: 'https://www.behance.net/gallery/143861559/Yum-Honey'
     },
     'laketi': {
@@ -716,15 +710,25 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
                             <h2 className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mb-4">01 — Problem</h2>
                         </div>
                         <div className="md:col-span-2">
-                            <p className="text-lg leading-relaxed mb-4">{project.problem.description}</p>
-                            <ul className="space-y-2 text-muted-foreground">
-                                {project.problem.points.map((point, i) => (
-                                    <li key={i} className="flex items-start gap-2">
-                                        <span className="text-foreground">•</span>
-                                        {point}
-                                    </li>
-                                ))}
-                            </ul>
+                            {project.problem.prose ? (
+                                <div className="space-y-4">
+                                    {project.problem.prose.map((p, i) => (
+                                        <p key={i} className="leading-relaxed text-muted-foreground">{p}</p>
+                                    ))}
+                                </div>
+                            ) : (
+                                <>
+                                    <p className="text-lg leading-relaxed mb-4">{project.problem.description}</p>
+                                    <ul className="space-y-2 text-muted-foreground">
+                                        {project.problem.points.map((point, i) => (
+                                            <li key={i} className="flex items-start gap-2">
+                                                <span className="text-foreground">•</span>
+                                                {point}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </>
+                            )}
                         </div>
                     </section>
 
@@ -734,15 +738,25 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
                             <h2 className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mb-4">02 — Solution</h2>
                         </div>
                         <div className="md:col-span-2">
-                            <p className="text-lg leading-relaxed mb-4">{project.solution.description}</p>
-                            <ul className="space-y-2 text-muted-foreground">
-                                {project.solution.points.map((point, i) => (
-                                    <li key={i} className="flex items-start gap-2">
-                                        <span className="text-foreground">•</span>
-                                        {point}
-                                    </li>
-                                ))}
-                            </ul>
+                            {project.solution.prose ? (
+                                <div className="space-y-4">
+                                    {project.solution.prose.map((p, i) => (
+                                        <p key={i} className="leading-relaxed text-muted-foreground">{p}</p>
+                                    ))}
+                                </div>
+                            ) : (
+                                <>
+                                    <p className="text-lg leading-relaxed mb-4">{project.solution.description}</p>
+                                    <ul className="space-y-2 text-muted-foreground">
+                                        {project.solution.points.map((point, i) => (
+                                            <li key={i} className="flex items-start gap-2">
+                                                <span className="text-foreground">•</span>
+                                                {point}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </>
+                            )}
                         </div>
                     </section>
 
@@ -752,14 +766,22 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
                             <h2 className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mb-4">03 — Impact</h2>
                         </div>
                         <div className="md:col-span-2">
-                            <ul className="space-y-3">
-                                {project.impact.map((item, i) => (
-                                    <li key={i} className="flex items-start gap-2 text-foreground">
-                                        <span className="text-green-600 dark:text-green-400">✓</span>
-                                        {item}
-                                    </li>
-                                ))}
-                            </ul>
+                            {project.impactProse ? (
+                                <div className="space-y-4">
+                                    {project.impactProse.map((p, i) => (
+                                        <p key={i} className="leading-relaxed text-muted-foreground">{p}</p>
+                                    ))}
+                                </div>
+                            ) : (
+                                <ul className="space-y-3">
+                                    {project.impact.map((item, i) => (
+                                        <li key={i} className="flex items-start gap-2 text-foreground">
+                                            <span className="text-green-600 dark:text-green-400">✓</span>
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
                         </div>
                     </section>
 

@@ -38,7 +38,7 @@ function Footerdemo() {
                     <div className="relative">
                         <h2 className="mb-4 text-3xl font-bold tracking-tight">Let's work together.</h2>
                         <p className="mb-6 text-muted-foreground text-sm leading-relaxed">
-                            Whether you're launching a product, refining a system, or need a visual story that lands — available for select projects.
+                            If you have a problem that needs thinking through — not just designing around — get in touch. Available for select projects in 2026.
                         </p>
                         <a
                             href="mailto:kelvinwamuiga@gmail.com"

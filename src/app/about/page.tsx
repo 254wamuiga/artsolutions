@@ -17,21 +17,22 @@ export default function AboutPage() {
                     transition={{ duration: 1, delay: 0.2 }}
                 >
                     <h2 className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mb-8 pb-2 border-b border-border">Methods</h2>
-                    <div className="space-y-12">
-                        <div>
-                            <p className="text-muted-foreground leading-relaxed mb-6">
-                                I'm a product designer and developer based in Nairobi, Kenya. I build digital experiences that bridge the gap between thought and execution — interfaces that are both purposeful and alive.
-                            </p>
-                            <p className="text-muted-foreground leading-relaxed">
-                                My work spans brand identity, web applications, e-commerce, and visualization tools. I'm most at home when the problem needs both design sensibility and engineering depth — where visual precision and system thinking have to coexist in the same build.
-                            </p>
-                        </div>
-                        <div>
-                            <h3 className="text-xl font-serif mb-4">How I work</h3>
-                            <p className="text-muted-foreground leading-relaxed">
-                                I start with the "why" behind the brief, translate business goals into interface logic, and ship work that moves the needle — not just work that looks good in a mockup. The process is equal parts clarity, creativity, and execution.
-                            </p>
-                        </div>
+                    <div className="space-y-8">
+                        <p className="text-muted-foreground leading-relaxed">
+                            I've been designing and building things for a while now, and the honest version of how I work is this: I'm better at finding the problem underneath the problem than I am at immediately jumping to a solution.
+                        </p>
+                        <p className="text-muted-foreground leading-relaxed">
+                            That probably sounds like a strange thing to put on a portfolio. But it's why the work tends to go further than the brief.
+                        </p>
+                        <p className="text-muted-foreground leading-relaxed">
+                            When I'm handed a project, my first instinct is to understand what the person on the other side is actually trying to resolve — not just what they're trying to do. A form is a task. A confident decision is a need. Most briefs describe tasks. The interesting work is in the needs.
+                        </p>
+                        <p className="text-muted-foreground leading-relaxed">
+                            From there I design with intention — trying to build interfaces and systems that reduce friction, build trust, and occasionally open up possibilities nobody asked for.
+                        </p>
+                        <p className="text-muted-foreground leading-relaxed">
+                            I'm currently focused on the intersection of product design, workflow automation, and how AI can support better decision-making in everyday tools. It's an area I'm actively learning in, and one I'm building toward.
+                        </p>
                     </div>
                 </motion.section>
 
@@ -41,7 +42,8 @@ export default function AboutPage() {
                     transition={{ duration: 1, delay: 0.4 }}
                     className="space-y-12"
                 >
-                    <h2 className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mb-8 pb-2 border-b border-border">Stack</h2>
+                    <h2 className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mb-2 pb-2 border-b border-border">Stack</h2>
+                    <p className="text-xs text-muted-foreground mb-8">Tools I'm currently working with:</p>
                     <div className="grid grid-cols-2 gap-8 font-mono text-[11px] uppercase tracking-widest">
                         <div className="space-y-2">
                             <span className="text-muted-foreground block border-b border-border/50 pb-1">Frameworks</span>

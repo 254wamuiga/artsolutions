@@ -39,7 +39,7 @@ const sora = localFont({
 
 export const metadata: Metadata = {
   title: "Kamau Wamuiga — Product Designer & Developer",
-  description: "Product designer and developer building purposeful digital tools from Nairobi, Kenya.",
+  description: "Kamau Wamuiga — Product designer and developer based in Nairobi. I design digital products that help people make better decisions.",
   icons: { icon: "/favIcon.png" },
 };
 

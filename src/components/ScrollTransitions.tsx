@@ -12,7 +12,7 @@ const SECTION_PROJECTS = [
         title: 'Yum Honey',
         category: 'Brand & Packaging',
         industry: 'Food & Beverage',
-        description: 'Built a full brand identity and packaging system that turns the shelf moment into a story worth stopping for.',
+        description: 'A honey brand that needed to feel premium without feeling distant. Built the identity, the packaging, and the story that earns the shelf.',
         src: '/Yum Honey-gif.webm',
         href: '/work/yum-honey',
     },
@@ -20,7 +20,7 @@ const SECTION_PROJECTS = [
         title: 'Visualizer EF',
         category: 'Product Design',
         industry: 'Interior Design',
-        description: 'Turned material selection from form anxiety into confident, visual decision-making.',
+        description: 'Clients were hesitating — not because the form was broken, but because they couldn\'t see the decision clearly. Built a tool that changed that.',
         src: '/Visualizer-gif.webm',
         href: '/work/visualizer-ef',
     },
@@ -28,7 +28,7 @@ const SECTION_PROJECTS = [
         title: 'Linaya',
         category: 'Web Design',
         industry: 'Lifestyle',
-        description: "A digital home where the brand's story lands with the weight it deserves.",
+        description: 'A lifestyle brand that deserved a digital presence as considered as the products it sells. Rebuilt from the ground up.',
         src: '/LINAYA-gif.webm',
         href: '/work/linaya',
     },
@@ -36,7 +36,7 @@ const SECTION_PROJECTS = [
         title: 'Bensonic',
         category: 'E-Commerce',
         industry: 'Technology',
-        description: 'Full e-commerce platform engineered to earn trust and close deals before the salesperson calls.',
+        description: 'A tech retailer with a broad catalogue and no online home. Built the platform that made everything discoverable and shoppable.',
         src: '/bsonic-gif.webm',
         href: '/work/bensonic',
     },
@@ -248,14 +248,14 @@ export function ScrollTransitions() {
         {
             image: '/profilePic2.webp',
             name: '',
-            text: 'Storytelling at the heart of the process…',
+            text: 'I start with the problem underneath the brief.',
             namePrefix: '',
             opacity: profilePic2Opacity,
         },
         {
             image: '/profilePic3.webp',
             name: '',
-            text: 'Art director, b.a.r',
+            text: 'Nairobi-based. Working globally.',
             namePrefix: '',
             opacity: profilePic3Opacity,
         },
@@ -270,8 +270,8 @@ export function ScrollTransitions() {
 
     // Plain JS string constants — avoids curly-quote encoding issues in JSX attributes
     const txt = {
-        s2heading: 'Brands that chose to build different and trusted me to make it real.',
-        s2body: 'From Nairobi to the global market I have partnered with startups and established brands to design and build digital products that do not just function they perform. Brand identities that stop shoppers. Platforms that close deals. Experiences that earn loyalty before the salesperson calls.',
+        s2heading: 'Brands that had a real problem and trusted me to work on it.',
+        s2body: 'From Nairobi to the global market I have worked with startups and established brands to design and build digital products that do more than look good. They reduce friction. They earn trust. They open new possibilities the brief did not ask for.',
     };
 
     return (
@@ -385,14 +385,14 @@ export function ScrollTransitions() {
                                 className="text-3xl md:text-5xl font-bold tracking-tight leading-tight mb-3"
                                 style={{ color: isDarkMode ? '#fafafa' : textColor }}
                             >
-                                Creative Developer
+                                Product Designer
                                 <br />
-                                &amp; Product Designer
+                                &amp; Developer
                             </motion.h1>
                             <div className="flex flex-wrap items-center gap-2 text-lg md:text-2xl font-medium mb-3" style={{ color: 'var(--muted-foreground)' }}>
                                 <span>Building</span>
                                 <TextRotate
-                                    texts={["User Interfaces", "Digital Products", "Web Applications", "Brand Experiences"]}
+                                    texts={["Decisions", "Experiences", "Systems", "Outcomes"]}
                                     mainClassName="text-foreground font-bold"
                                     staggerFrom="first"
                                     initial={{ y: "100%", opacity: 0 }}
@@ -408,7 +408,7 @@ export function ScrollTransitions() {
                                 className="text-sm leading-relaxed max-w-sm"
                                 style={{ color: isDarkMode ? '#fafafa' : textColor }}
                             >
-                                I&apos;m Kamau Wamuiga. I build digital products that close the gap between a business&apos;s ambition and its audience&apos;s expectations.
+                                I&apos;m Kamau Wamuiga. I design and build digital products that help people make better decisions — faster, with more confidence, and less friction. Most of the time, the problem isn&apos;t what it looks like on the surface. I like finding what&apos;s underneath it.
                             </motion.p>
                         </div>
                         <motion.p
@@ -581,22 +581,22 @@ export function ScrollTransitions() {
                                 className={'text-base leading-relaxed mb-5 md:mb-8 max-w-md'}
                                 style={{ color: isDarkMode ? '#fafafa' : textColor }}
                             >
-                                I do not design for applause. I design for outcomes.
-                                My process starts with diagnosing the real problem — not the one on the brief, but the one underneath it.
-                                From there, design becomes a precision tool: reducing friction, building trust, and creating experiences that make people feel understood.
+                                I try to start every project by asking a simple question: what is the person on the other side of this actually trying to resolve?
+                                Not what they are trying to do — what they are trying to resolve. Those are different questions, and they lead to different work.
+                                From there the process is straightforward: understand the real problem, design with intention, and ship something that earns trust before anyone has to pitch it.
                             </motion.p>
 
                             {/* Process steps */}
                             <div className={'flex flex-col gap-4 mb-6 md:mb-8'}>
                                 {[
-                                    { n: '01', label: 'Diagnose', desc: 'Understand the real problem, not just the brief.' },
-                                    { n: '02', label: 'Design', desc: 'Build with intention, not just instinct.' },
-                                    { n: '03', label: 'Deliver', desc: 'Ship work that earns trust before the pitch.' },
+                                    { n: '01', label: '', desc: 'Listen for the problem underneath the brief.' },
+                                    { n: '02', label: '', desc: 'Design for what the person needs to resolve, not just complete.' },
+                                    { n: '03', label: '', desc: 'Ship work that does the job before anyone has to explain it.' },
                                 ].map(({ n, label, desc }) => (
                                     <div key={n} className={'flex items-start gap-4'}>
                                         <motion.span className={'font-mono flex-shrink-0 mt-0.5'} style={{ color: isDarkMode ? '#a3a3a3' : mutedTextColor, fontSize: '11px' }}>{n}</motion.span>
                                         <div>
-                                            <motion.span className={'font-mono uppercase tracking-widest'} style={{ color: isDarkMode ? '#fafafa' : textColor, fontSize: '12px' }}>{label} — </motion.span>
+                                            {label && <motion.span className={'font-mono uppercase tracking-widest'} style={{ color: isDarkMode ? '#fafafa' : textColor, fontSize: '12px' }}>{label} — </motion.span>}
                                             <motion.span className={'text-sm'} style={{ color: isDarkMode ? '#fafafa' : textColor }}>{desc}</motion.span>
                                         </div>
                                     </div>
