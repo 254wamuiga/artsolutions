@@ -460,7 +460,7 @@ export function ScrollTransitions() {
 
                                     {/* Center: Video */}
                                     <div
-                                        className="relative flex-1 rounded-2xl overflow-hidden bg-white/5 h-[45vh] md:h-[65vh]"
+                                        className="relative flex-1 rounded-2xl overflow-hidden bg-white h-[45vh] md:h-[65vh]"
                                     >
                                         <video
                                             src={project.src}
