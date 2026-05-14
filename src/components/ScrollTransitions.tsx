@@ -316,13 +316,15 @@ export function ScrollTransitions() {
                             style={{ opacity: heroImgOpacity }}
                         >
                             <video
-                                src="/as-hero.mp4"
                                 autoPlay
                                 loop
                                 muted
                                 playsInline
                                 className="absolute inset-0 w-full h-full object-cover"
-                            />
+                            >
+                                <source src="/as-hero.webm" type="video/webm" />
+                                <source src="/as-hero.mp4" type="video/mp4" />
+                            </video>
                         </motion.div>
                     </div>
 
