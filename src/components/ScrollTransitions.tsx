@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef, useState, useEffect } from 'react';
-import { motion, useScroll, useTransform, AnimatePresence, useMotionValueEvent } from 'framer-motion';
+import { motion, useScroll, useTransform, useMotionValueEvent } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { TextRotate } from '@/components/ui/text-rotate';
@@ -115,29 +115,6 @@ export function ScrollTransitions() {
         return () => observer.disconnect();
     }, []);
 
-    // ── Project Preview Slideshow — All highlighted projects ──
-    const projectPreviewImages = [
-        { src: '/Visualizer-gif.webm', alt: 'Visualizer EF — Stone visualization tool' },
-        { src: '/bsonic-gif.webm', alt: 'Bensonic — E-commerce platform' },
-        { src: '/LINAYA-gif.webm', alt: 'Linaya — Brand experience' },
-        { src: '/jgateritherapygif.webm', alt: 'Jgateri Therapy — Web presence' },
-        { src: '/juba-gif.webm', alt: 'Jubu — Architecture visualization' },
-        { src: '/kwetu-gif.webm', alt: 'Kwetu Nairobi — Hospitality design' },
-        { src: '/made in the ke-gif.webm', alt: 'Made In THE KE — Artisan curation' },
-        { src: '/Yum Honey-gif.webm', alt: 'Yum Honey — Product packaging' },
-        { src: '/Magol Car Hire-gif.webm', alt: 'Magol Executive Car Hire' },
-        { src: '/nftproject-gif1.webm', alt: 'BR2078 — Web3 marketplace' },
-        { src: '/Ba-Ci-Or-gif.webm', alt: 'Bi-Ci-Or — Beverage concept' },
-        { src: '/Laketi.webp', alt: 'Laketi by RED — Brand identity' },
-    ];
-    const [currentSlide, setCurrentSlide] = useState(0);
-
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setCurrentSlide((prev) => (prev + 1) % projectPreviewImages.length);
-        }, 2500);
-        return () => clearInterval(timer);
-    }, [projectPreviewImages.length]);
 
     const { scrollYProgress } = useScroll({
         target: containerRef,
@@ -332,43 +309,20 @@ export function ScrollTransitions() {
                     className="absolute inset-0 flex flex-col"
                     style={{ opacity: heroOpacity, pointerEvents: heroPointerEvents }}
                 >
-                    {/* Rapid-fire project preview */}
+                    {/* Hero reel */}
                     <div className="h-[63vh] md:flex-1 flex items-center justify-center px-8 pt-20">
                         <motion.div
-                            className="relative w-full max-w-[800px] aspect-video rounded-3xl overflow-hidden bg-black/5 shadow-[0_24px_60px_-8px_rgba(0,0,0,0.18)]"
+                            className="relative w-full max-w-[800px] aspect-video rounded-3xl overflow-hidden bg-black shadow-[0_24px_60px_-8px_rgba(0,0,0,0.18)]"
                             style={{ opacity: heroImgOpacity }}
                         >
-                            <AnimatePresence mode="popLayout">
-                                <motion.div
-                                    key={currentSlide}
-                                    className="absolute inset-0"
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    exit={{ opacity: 0 }}
-                                    transition={{ duration: 0.2, ease: 'linear' }}
-                                >
-                                    {projectPreviewImages[currentSlide].src.endsWith('.webm') ? (
-                                        <video
-                                            key={projectPreviewImages[currentSlide].src}
-                                            src={projectPreviewImages[currentSlide].src}
-                                            autoPlay
-                                            loop
-                                            muted
-                                            playsInline
-                                            className="absolute inset-0 w-full h-full object-contain"
-                                        />
-                                    ) : (
-                                        <Image
-                                            src={projectPreviewImages[currentSlide].src}
-                                            alt={projectPreviewImages[currentSlide].alt}
-                                            fill
-                                            className="object-contain"
-                                            priority
-                                            sizes="(max-width: 768px) 100vw, 800px"
-                                        />
-                                    )}
-                                </motion.div>
-                            </AnimatePresence>
+                            <video
+                                src="/as-hero.mp4"
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
+                                className="absolute inset-0 w-full h-full object-cover"
+                            />
                         </motion.div>
                     </div>
 
