@@ -312,7 +312,7 @@ export function ScrollTransitions() {
                     {/* Hero reel */}
                     <div className="h-[63vh] md:flex-1 flex items-center justify-center px-8 pt-20">
                         <motion.div
-                            className="relative w-full max-w-[800px] aspect-video rounded-3xl overflow-hidden bg-black shadow-[0_24px_60px_-8px_rgba(0,0,0,0.18)]"
+                            className="relative w-full max-w-[800px] aspect-video rounded-3xl overflow-hidden bg-white shadow-[0_24px_60px_-8px_rgba(0,0,0,0.18)]"
                             style={{ opacity: heroImgOpacity }}
                         >
                             <video
